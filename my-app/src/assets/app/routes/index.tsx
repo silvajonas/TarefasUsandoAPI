@@ -1,17 +1,15 @@
-import { Link } from "react-router-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Inicio } from "../pages/inicio";
-import { Login } from "../pages/Login";
+import { Dashboard, Login } from "../pages";
 
 
 export const Rotas = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<h1>Pagina Inicial</h1>} />
-        <Route path="/inicio" element={<Inicio />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/pagina-inicial" element={<Dashboard/>} />
+        <Route path="/entrar" element={<Login/>} />
         
+        <Route path="*" element={<Dashboard/>} />
       </Routes>
 
     </BrowserRouter>
